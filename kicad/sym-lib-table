@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "pferdibank-rescue")(type "KiCad")(uri "${KIPRJMOD}/pferdibank-rescue.kicad_sym")(options "")(descr ""))
+  (lib (name "battery-rescue")(type "KiCad")(uri "${KIPRJMOD}/battery-rescue.kicad_sym")(options "")(descr ""))
+  (lib (name "2025-12-02_09-47-39")(type "KiCad")(uri "${KIPRJMOD}/ul_LM51770DCPR/KiCADv6/2025-12-02_09-47-39.kicad_sym")(options "")(descr ""))
+)
