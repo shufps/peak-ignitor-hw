@@ -116,7 +116,7 @@ Because the market offers either:
 - huge car jump‑starter bricks
 
 **Peak Ignitor sits right in between**:
-too compact, too powerful, too specialized.
+too compact, too powerful, too specialized. (and too expensive 😁)
 
 So it was built.
 
