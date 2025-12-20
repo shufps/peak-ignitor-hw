@@ -1,0 +1,26 @@
+Battery is "Fullsend 4s 3000mAh Li-Ion Battery"
+
+Link: https://iflight-rc.eu/en-de/products/fullsend-4s-3000mah-li-ion-battery
+
+Technical data:
+
+Technical Specifications
+Cell: Samsung INR18650-30Q
+Nominal Voltage: 3.6V
+Nominal Capacity: 3000mAh
+Max Charge Voltage: 4.2V per cell
+Cut-off Voltage: 2.5V per cell (2.9–3.1V recommended end-flight)
+Continuous Discharge (per cell): 15A
+Pulse Discharge (per cell, short <10s): up to 20A
+Operating Temp (Discharge): –20°C to +75°C
+Operating Temp (Charge): 0°C to +50°C
+
+Pack Overview
+Configuration: 4S1P (14.8V nominal)
+Capacity: 3000mAh / 44.4Wh
+Practical Continuous Current: ~10–15A (ideal for endurance cruising)
+Burst Current (<10s): up to 20A
+Dimensions: 67 × 37 × 37mm
+Weight: 205g
+Connector: XT30U (60mm discharge lead) + JST-XH balance lead (30mm)
+Optimal Ambient Operating Range: 15°C to 35°C for performance & longevity
