@@ -10,6 +10,11 @@ It started with a very simple requirement:
 …and, as usual, escalated significantly.
 
 ---
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/55ae30ad-7d47-4610-8ebe-bdd48282fc04" />
+
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/b7ad5043-7b53-4860-8714-538e53ab04af" />
+
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/7fccbbe4-c09c-468b-90c8-fdd337c5574c" />
 
 ## ✨ Features
 
@@ -111,7 +116,7 @@ Because the market offers either:
 - huge car jump‑starter bricks
 
 **Peak Ignitor sits right in between**:
-too compact, too powerful, too specialized.
+too compact, too powerful, too specialized. (and too expensive 😁)
 
 So it was built.
 
