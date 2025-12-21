@@ -34702,6 +34702,17 @@
 			(uuid "6abde177-ff42-45f5-a4c9-503dfe28baf9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/3d/LM51770DCPR.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "B.Cu")
