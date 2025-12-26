@@ -9233,6 +9233,26 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Note: Temps seem to be okay with 20V input and ~1.8A charging current"
+		(exclude_from_sim no)
+		(at 53.975 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "06e33cc4-5982-4c37-95d4-0b4dd4a83c6e")
+	)
+	(text "(3.3V/(R2+R1)*R1)(20*Rsense)=Icharge\n(3.3V/(100k+12k)*12k)/(20*10mR)=1.76A"
+		(exclude_from_sim no)
+		(at 95.25 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "58e80bd3-275a-42f5-97ca-7abc156fb4a4")
+	)
 	(text "Vmon = Iload * Rshunt * gm(Imon) * Rmon\n3.326V = 15A * 2.5mR * 1mS * 88700R\n\nIloadMax = VMonMax / Rshunt / gm(Imon) / Rmon\n14.88A = 3.3V / 2.5mR / 1mS / 88700R"
 		(exclude_from_sim no)
 		(at 263.525 227.33 0)
@@ -9254,17 +9274,6 @@
 		)
 		(uuid "7a0f0611-fe1c-4bd8-ba4f-35a212cac53c")
 	)
-	(text "12V=2.309, 17V=3.271"
-		(exclude_from_sim no)
-		(at 336.55 388.62 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a65c07ab-03c2-4af9-a679-a344a3d73c46")
-	)
 	(text "misc"
 		(exclude_from_sim no)
 		(at 49.53 154.94 0)
@@ -9274,6 +9283,16 @@
 			)
 		)
 		(uuid "b2bc31a1-d875-48f2-9816-c32ac6f1d244")
+	)
+	(text "22.1k = 3A\n12k = 1.8A"
+		(exclude_from_sim no)
+		(at 109.22 106.045 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c03fe62c-bcc6-429f-861b-64f5795045ed")
 	)
 	(text "4s (16.8V)"
 		(exclude_from_sim no)
@@ -9389,6 +9408,12 @@
 		(uuid "21f85b6f-6f52-44ad-9b56-9ac511214308")
 	)
 	(junction
+		(at 46.99 233.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "22af96e4-fe74-472b-a63d-71636d6c54d1")
+	)
+	(junction
 		(at 430.53 160.02)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9441,12 +9466,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "408e7900-7c2c-4d79-94d8-50a6bbd35dca")
-	)
-	(junction
-		(at 46.99 233.68)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4666191e-b028-47e0-96cf-be23ee4f8862")
 	)
 	(junction
 		(at 407.67 370.84)
@@ -10241,6 +10260,16 @@
 			(type default)
 		)
 		(uuid "12defdc8-e28b-4402-9d5f-2c6dda558abd")
+	)
+	(wire
+		(pts
+			(xy 46.99 233.68) (xy 62.23 233.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12f0f419-c9ae-40cf-a508-534fdcad08ac")
 	)
 	(wire
 		(pts
@@ -12971,16 +13000,6 @@
 			(type default)
 		)
 		(uuid "b9d953e0-c72f-454d-b77e-77ba3b3c1305")
-	)
-	(wire
-		(pts
-			(xy 46.99 233.68) (xy 62.23 233.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9f32726-68de-4d3d-9393-8369f4ec29b3")
 	)
 	(wire
 		(pts
@@ -16407,7 +16426,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22.1k"
+		(property "Value" "12k"
 			(at 118.618 111.633 0)
 			(effects
 				(font
@@ -19648,7 +19667,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "102k"
+		(property "Value" "100k"
 			(at 338.328 365.633 0)
 			(effects
 				(font
@@ -19717,7 +19736,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "24.3k"
+		(property "Value" "20k"
 			(at 338.328 375.793 0)
 			(effects
 				(font
@@ -25562,79 +25581,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:BZX84Cxx")
-		(at 46.99 237.49 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5657cf51-3f8b-426c-86ea-2f4402da5992")
-		(property "Reference" "D6"
-			(at 49.53 236.2199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BZX84C3V3"
-			(at 49.53 238.7599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 46.99 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf"
-			(at 46.99 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "300mW Zener Diode, SOT-23"
-			(at 46.99 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ff786dcb-908c-443d-9227-a65ac8c897ff")
-		)
-		(pin "3"
-			(uuid "60e52136-8c37-4df5-80fa-5185ba65702d")
-		)
-		(pin "2"
-			(uuid "844ea4fb-ed85-4c5c-a663-665400108931")
-		)
-		(instances
-			(project ""
-				(path "/f83baf2c-645b-4eaa-9e2e-814c12002028"
-					(reference "D6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_01x01")
 		(at 160.02 375.92 0)
 		(unit 1)
@@ -29215,7 +29161,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "RP3502MBRED"
+		(property "Manufacturer" "RP3502MARED"
 			(at 29.21 151.13 0)
 			(effects
 				(font
@@ -29224,7 +29170,7 @@
 				(hide yes)
 			)
 		)
-		(property "OrderNr" "EG1939-ND"
+		(property "OrderNr" "EG1938-ND"
 			(at 29.21 151.13 0)
 			(effects
 				(font
@@ -29490,7 +29436,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf"
+		(property "Datasheet" ""
 			(at 275.59 374.65 0)
 			(effects
 				(font
@@ -29499,35 +29445,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "300mW Zener Diode, SOT-23"
+		(property "Description" ""
 			(at 275.59 374.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor" "D"
-			(at 275.59 374.65 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "BZX84C15-TP"
-			(at 275.59 374.65 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "OrderNr" "BZX84C15-TPMSCT-ND"
-			(at 275.59 374.65 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30805,6 +30724,76 @@
 			(project ""
 				(path "/f83baf2c-645b-4eaa-9e2e-814c12002028"
 					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 46.99 237.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd9e11a6-e983-444a-99ea-8cd9dd293506")
+		(property "Reference" "C24"
+			(at 50.8 236.2199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 50.8 238.7599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 47.9552 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 237.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 46.99 237.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "da2934c7-aa7d-44ab-8525-969ef8af2549")
+		)
+		(pin "2"
+			(uuid "73db27d4-c914-47d4-9eb4-35ba1a4852f8")
+		)
+		(instances
+			(project "peak-ignitor-box"
+				(path "/f83baf2c-645b-4eaa-9e2e-814c12002028"
+					(reference "C24")
 					(unit 1)
 				)
 			)
