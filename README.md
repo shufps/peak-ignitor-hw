@@ -57,7 +57,7 @@ It started with a very simple requirement:
 - 🏄 **SUP pump / compressor**
   - ~110 W @ 12 V → stable and reliable.
 
-- ⛏️ **NerdQAxe++ / 0xaxe demos**
+- ⛏️ **NerdQAxe++**
   - ~80 W mobile operation → no problem.
 
 - 🔌 **General 12 V loads**
