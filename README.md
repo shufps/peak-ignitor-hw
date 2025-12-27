@@ -75,7 +75,7 @@ It started with a very simple requirement:
 | Output Voltage      | 12 V regulated                |
 | Output Power        | ~150 W (practical)            |
 | Peak Power          | Higher, time‑limited          |
-| Efficiency          | Very high (optimized FETs)    |
+| Efficiency          | ~94% (measured)               |
 | Cooling             | Copper → aluminum enclosure   |
 | Controller          | ESP32‑S3                      |
 
