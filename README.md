@@ -25,7 +25,7 @@ It started with a very simple requirement:
 
 - ⚡ **Regulated 12 V Output**
   - Buck/Boost converter (TI LM51770)
-  - ~100–120 W realistically usable
+  - ~150 W realistically usable
   - Short‑term higher peak power
   - Standard automotive cigarette lighter socket
 
