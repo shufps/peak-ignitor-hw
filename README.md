@@ -25,7 +25,7 @@ It started with a very simple requirement:
 
 - ⚡ **Regulated 12 V Output**
   - Buck/Boost converter (TI LM51770)
-  - ~150 W continuous load
+  - ~120 W continuous load (peak 160W)
   - Standard automotive cigarette lighter socket
 
 - 🧊 **Serious Thermal Design**
@@ -73,7 +73,7 @@ It started with a very simple requirement:
 | Battery             | 4S1P Li‑Ion (18650)           |
 | Energy              | ~44 Wh                        |
 | Output Voltage      | 12 V regulated                |
-| Output Power        | ~150 W (practical)            |
+| Output Power        | ~120 W (160W peak)            |
 | Peak Power          | Higher, time‑limited          |
 | Efficiency          | ~94% (measured)               |
 | Cooling             | Copper → aluminum enclosure   |
