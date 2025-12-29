@@ -14593,7 +14593,7 @@
 			)
 		)
 	)
-	(global_label "LED_GREEN"
+	(global_label "LED_RED"
 		(shape passive)
 		(at 154.94 397.51 270)
 		(fields_autoplaced yes)
@@ -14605,7 +14605,7 @@
 		)
 		(uuid "7853d41d-5703-4f5b-9771-9437e037e59c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 154.94 409.4717 90)
+			(at 154.94 406.9922 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14637,7 +14637,7 @@
 			)
 		)
 	)
-	(global_label "LED_GREEN"
+	(global_label "LED_RED"
 		(shape passive)
 		(at 81.28 308.61 180)
 		(fields_autoplaced yes)
@@ -14649,7 +14649,7 @@
 		)
 		(uuid "84fa76ae-a76d-4005-adb8-e94a7843cac6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 69.3183 308.61 0)
+			(at 71.7978 308.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14681,7 +14681,7 @@
 			)
 		)
 	)
-	(global_label "LED_RED"
+	(global_label "LED_GREEN"
 		(shape passive)
 		(at 144.78 397.51 270)
 		(fields_autoplaced yes)
@@ -14693,7 +14693,7 @@
 		)
 		(uuid "85a12e99-f022-4d23-94fb-25644d94a824")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.78 406.9922 90)
+			(at 144.78 409.4717 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14811,7 +14811,7 @@
 			)
 		)
 	)
-	(global_label "LED_RED"
+	(global_label "LED_GREEN"
 		(shape passive)
 		(at 124.46 283.21 0)
 		(fields_autoplaced yes)
@@ -14823,7 +14823,7 @@
 		)
 		(uuid "d4582f01-8886-4ec8-b9a8-7c8ca2631263")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 133.9422 283.21 0)
+			(at 136.4217 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25656,7 +25656,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "58118d61-028d-4ee1-a228-61bf09a31d8c")
 		(property "Reference" "SW1"
 			(at 88.9 387.3499 90)
@@ -26652,7 +26652,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "630f6d97-7561-42cc-a360-0bb13e6962f8")
 		(property "Reference" "SW2"
 			(at 99.06 387.3499 90)
@@ -29747,7 +29747,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "a4683eea-d2e3-4de4-8ccd-f8a572059c11")
 		(property "Reference" "J4"
