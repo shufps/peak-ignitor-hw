@@ -1,3 +1,8 @@
+![Status](https://img.shields.io/badge/status-WiP-critical?style=for-the-badge)
+> 🚧 **Work in Progress**  
+> This project is under active development.
+
+
 # 🔥 Peak Ignitor
 
 **Peak Ignitor** is a compact, battery-powered **high-power 12 V supply** designed for one very specific real-world problem:
