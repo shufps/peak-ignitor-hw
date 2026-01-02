@@ -1,13 +1,22 @@
+# 🔥 Peak Ignitor
 
+**Peak Ignitor** is a compact, battery-powered **high-power 12 V supply** designed for one very specific real-world problem:
 
-# 🔥 Peak Ignitor  (AI Summary 😁)
+> *Reliable power in cold, wind, and harsh environments.*
 
-**Peak Ignitor** is a compact, high‑power **12 V portable power unit**.
-It started with a very simple requirement:
+The original trigger was simple:  
+lighting a cigarette on a mountain at –10 °C and strong wind — where gas, electric, and plasma lighters all failed.
 
-> *“I want to reliably light a cigarette on a freezing mountain peak.”*
+What *did* work was a classic **car cigarette lighter**:  
+wind-proof, temperature-independent, and brutally simple — as long as you can supply enough current.
 
-…and, as usual, escalated significantly.
+That requirement immediately defines the problem space:
+
+- 6–10 A at 12 V  
+- ~120 W continuous power  
+- short but demanding duty cycles  
+
+Peak Ignitor is the result.
 
 ---
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/55ae30ad-7d47-4610-8ebe-bdd48282fc04" />
@@ -16,113 +25,126 @@ It started with a very simple requirement:
 
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/7fccbbe4-c09c-468b-90c8-fdd337c5574c" />
 
-## ✨ Features
+## What It Is
 
-- 🔋 **4S Li‑Ion Power**
-  - 4S1P 18650 pack (Samsung 30Q)
-  - ~44 Wh energy
-  - Integrated BMS with balancing and protection
+Peak Ignitor is a **hand-sized, self-contained 12 V power unit** capable of delivering **120 W continuously** (up to ~160 W peak), powered by a **4S Li-Ion battery pack** and designed with **thermal and mechanical constraints as first-class design inputs**.
 
-- ⚡ **Regulated 12 V Output**
-  - Buck/Boost converter (TI LM51770)
-  - ~120 W continuous load (peak 160W)
+This is not a power bank and not a jump starter — it sits deliberately in between.
+
+---
+
+## Key Characteristics
+
+- 🔋 **4S Li-Ion Battery System**
+  - 4S1P Samsung 18650 (30Q)
+  - ~44 Wh energy
+  - Proper BMS with balancing and protection
+  - Battery operated close to practical limits — intentionally and transparently
+
+- ⚡ **Regulated 12 V Output**
+  - High-power buck/boost converter (TI LM51770)
+  - ~120 W continuous output
+  - ~160 W peak, time-limited
   - Standard automotive cigarette lighter socket
 
-- 🧊 **Serious Thermal Design**
-  - Custom **solid copper heatsink**
-  - Direct thermal coupling into an aluminum enclosure
-  - Temperature monitoring (TMP1075)
-  - Designed for measurement, not hope
+- 🧊 **Mechanics-First Thermal Design**
+  - Custom-machined **solid copper heatsink**
+  - Direct thermal coupling into the aluminum enclosure
+  - The enclosure itself acts as a secondary heatsink
+  - Temperature measurement placed directly beneath the heatsink (TMP1075)
 
-- 🧠 **Onboard Intelligence**
-  - ESP32‑S3 Mini‑1
-  - Status LEDs (intentionally inverted):
-    - 🔴 **Red** = Output / active power
-    - 🟢 **Green** = Charging
-  - Firmware‑controlled operating and safety logic
+- 🧠 **Embedded Control & Monitoring**
+  - ESP32-S3 Mini-1
+  - Real-time monitoring of voltage, current, power, and temperature
+  - Software-enforced safety limits (not just hardware ceilings)
+  - Wi-Fi Web UI for observability (because why not 😎)
 
 - 🔌 **Integrated Charging**
-  - Built‑in Li‑Ion charger
+  - Onboard Li-Ion charging circuit
   - Balancer connector
-  - No external hobby charger required
+  - Fully self-contained — no external hobby charger required
 
 ---
 
-## 🏔️ Typical Use Cases
+## Design Approach
 
-- 🔥 **Cigarette lighter**
-  - 6–10 A for a few seconds → trivial load.
+A central idea behind Peak Ignitor is **mechanics-first design**:
 
-- 🏄 **SUP pump / compressor**
-  - ~110 W @ 12 V → stable and reliable.
+The complete 3D model — enclosure, PCB outline, mounting points, heatsink geometry, connector placement, and thermal paths — was created **before** PCB layout and component selection.
 
-- ⛏️ **NerdQAxe++**
-  - ~80 W mobile operation → no problem.
+This tightly couples:
 
-- 🔌 **General 12 V loads**
-  - Car USB adapters
-  - Measurement equipment
-  - Anything normally powered from a cigarette lighter
+- Mechanical design  
+- PCB layout and form factor  
+- Thermal constraints  
+- User interaction and front-panel layout  
 
----
+into a single coherent system.
 
-## 📐 Technical Overview
-
-| Parameter            | Value                         |
-|---------------------|-------------------------------|
-| Battery             | 4S1P Li‑Ion (18650)           |
-| Energy              | ~44 Wh                        |
-| Output Voltage      | 12 V regulated                |
-| Output Power        | ~120 W (160W peak)            |
-| Peak Power          | Higher, time‑limited          |
-| Efficiency          | ~94% (measured)               |
-| Cooling             | Copper → aluminum enclosure   |
-| Controller          | ESP32‑S3                      |
+As a result, the PCB, heatsink, battery pack, and enclosure are not independent parts — they are **co-designed elements of one integrated structure**.
 
 ---
 
-## 🧪 Design Philosophy
+## Thermal Philosophy
 
-Peak Ignitor is **not a commercial product**, but a **statement**:
+Thermal management is not an accessory here.
 
-- No fantasy specifications
-- No low‑end power‑bank compromises
-- No “good enough” thermal guessing
+Heat is transferred:
+1. from the power electronics  
+2. into a custom copper heatsink  
+3. directly into the aluminum enclosure  
 
-Instead:
+This effectively turns the entire case into an active thermal component — a design style commonly found in industrial or automotive hardware, but rarely in DIY projects.
 
-- Honest performance
-- Clean layout
-- Electrical and mechanical design as one system
-- Built for **real‑world reliability**
+Sustained output is **intentionally limited by battery temperature**, not by electronic capability.
 
 ---
 
-## ⚠️ Safety Notes
+## Typical Use Cases
 
-- High‑current device – not a toy.
-- Use only suitable loads.
-- Do not modify without understanding protection mechanisms.
-- Never operate the battery without the BMS.
+- 🔥 **Car cigarette lighter**  
+  6–10 A for seconds — trivial load.
 
----
+- 🏄 **SUP pumps / small compressors**  
+  ~110 W continuous at 12 V.
 
-## 🧠 Why You Can’t Buy This
+- ⛏️ **NerdQAxe++**  
+  ~80 W mobile operation.
 
-Because the market offers either:
-
-- tiny USB power banks **or**
-- huge car jump‑starter bricks
-
-**Peak Ignitor sits right in between**:
-too compact, too powerful, too specialized. (and too expensive 😁)
-
-So it was built.
+- 🔌 **General 12 V loads**  
+  Measurement equipment, adapters, field hardware.
 
 ---
 
-## 😁 Closing Words
+## What This Project Demonstrates
 
-> *A good horse jumps only as high as it needs to.*
->
-> **Peak Ignitor jumps higher – on purpose.**
+Peak Ignitor is less about lighting a cigarette — and more about showing what happens when:
+
+- real-world requirements  
+- harsh environmental constraints  
+- and a refusal to accept “almost good enough”  
+
+meet a **system-level engineering mindset**.
+
+It combines:
+- energy storage  
+- power electronics  
+- thermal engineering  
+- mechanical design  
+- embedded firmware  
+
+into a compact, honest, high-power device.
+
+---
+
+## Notes
+
+- High-current device — **not a toy**
+- Use only suitable loads
+- Do not bypass or modify protection mechanisms
+- Never operate the battery without the BMS
+
+---
+
+> *A good horse jumps only as high as it needs to.*  
+> **Peak Ignitor jumps higher — on purpose.**
